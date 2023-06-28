@@ -6,9 +6,10 @@ const useApi = (url) => {
   const [data, setData] = useState(null)
 
   const fetchApi = () => {
+    //fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     fetch(url) // 'https://jsonplaceholder.typicode.com/users'
     .then(response => {
-      return response.json()
+      return response.json() //extract JSON from HTTP response
     })
     .then(json => {
       console.log(json)
